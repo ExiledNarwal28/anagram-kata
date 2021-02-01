@@ -1,5 +1,7 @@
 package com.rocknprog.anagramkata.domain;
 
+import java.util.Arrays;
+
 public class Word {
   private final String word;
 
@@ -7,12 +9,25 @@ public class Word {
     this.word = word;
   }
 
-  public boolean isAnagram(Word otherWord) {
-    // TODO : Implement Word.isAnagram
-    return true;
+  public boolean isAnagram(Word potentialAnagram) {
+    String otherWord = potentialAnagram.toString();
+
+    if (word.length() != otherWord.length()) {
+      return false;
+    }
+
+    String myWord = word.toLowerCase();
+    otherWord = otherWord.toLowerCase();
+    char[] c1 = myWord.toCharArray();
+    char[] c2 = otherWord.toCharArray();
+    Arrays.sort(c1);
+    Arrays.sort(c2);
+    String sc1 = new String(c1);
+    String sc2 = new String(c2);
+
+    return sc1.equals(sc2);
   }
 
-  // TODO : Implement Word.toString
   @Override
   public String toString() {
     return word;
