@@ -24,8 +24,6 @@ The app will be running on [http://localhost:8080](http://localhost:8080).
 
 ## Contributing
 
-Before contributing to the project, please read our [contribution guide](CONTRIBUTING.md).
-
 ### Run tests
 
 Tests are located in `src/test/java/com/rocknprog/anagramkata`. They are all checked pre-commit and during the CI pipeline. Coverage report are generated using Jacoco during the report built phase.
