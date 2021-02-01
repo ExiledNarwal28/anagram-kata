@@ -18,7 +18,7 @@ public class ServerResourceConfig {
               public Set<Object> getSingletons() {
                 // TODO : Setup actual injection for resources
                 HashSet<Object> resources = new HashSet<>();
-                resources.add(new AnagramResource(new AnagramService()));
+                resources.add(new AnagramResource(new AnagramService(wordListHelper)));
                 return resources;
               }
 
