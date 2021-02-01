@@ -1,5 +1,7 @@
 package com.rocknprog.anagramkata;
 
+import com.rocknprog.anagramkata.anagrams.api.AnagramResource;
+import com.rocknprog.anagramkata.anagrams.services.AnagramService;
 import com.rocknprog.anagramkata.http.api.CORSResponseFilter;
 import java.util.Collections;
 import java.util.HashSet;
@@ -16,16 +18,7 @@ public class ServerResourceConfig {
               public Set<Object> getSingletons() {
                 HashSet<Object> resources = new HashSet<>();
                 // TODO : Setup actual injection for resources
-                /*
-                resources.add(APPLICATION_INJECTOR.createUserResource());
-                resources.add(APPLICATION_INJECTOR.createOffenseResource());
-                resources.add(APPLICATION_INJECTOR.createGateResource());
-                resources.add(APPLICATION_INJECTOR.createCarbonCreditResource());
-                resources.add(APPLICATION_INJECTOR.createParkingAreaResource());
-                resources.add(APPLICATION_INJECTOR.createInitiativeResource());
-                resources.add(APPLICATION_INJECTOR.createReportProfitResource());
-                resources.add(APPLICATION_INJECTOR.createReportParkingAreaResource());
-                */
+                resources.add(new AnagramResource(new AnagramService()));
                 return resources;
               }
 

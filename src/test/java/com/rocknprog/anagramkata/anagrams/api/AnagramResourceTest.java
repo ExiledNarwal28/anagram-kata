@@ -44,6 +44,6 @@ public class AnagramResourceTest {
   public void whenFindAnagrams_thenRespondOkStatus() {
     Response response = anagramResource.findAnagrams(wordDto);
 
-    assertThat(response.getStatus()).isEqualTo(Response.Status.CREATED.getStatusCode());
+    assertThat(response.getStatus()).isEqualTo(Response.Status.OK.getStatusCode());
   }
 }

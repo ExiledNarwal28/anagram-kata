@@ -22,7 +22,7 @@ public class AnagramResource {
   public Response findAnagrams(WordDto wordDto) {
     AnagramsDto anagramsDto = anagramService.findAnagrams(wordDto);
 
-    return Response.status(Response.Status.CREATED)
+    return Response.status(Response.Status.OK)
         .entity(anagramsDto)
         .type(MediaType.APPLICATION_JSON)
         .build();
