@@ -15,21 +15,15 @@ public class AnagramService {
     this.wordListHelper = wordListHelper;
   }
 
-  // TODO : Test AnagramService.findAnagrams
   public AnagramListDto findAnagrams(WordDto wordDto) {
-    List<String> stringList = wordListHelper.getWordList(); // TODO : Implement WordRepository
+    List<String> stringList = wordListHelper.getWordList();
 
-    List<Word> wordList =
-        stringList.stream()
-            .map(Word::new)
-            .collect(Collectors.toList()); // TODO : Implement WordAssembler
-
-    Word givenWord = new Word(wordDto.word); // TODO : Implement WordAssembler
+    List<Word> wordList = stringList.stream().map(Word::new).collect(Collectors.toList());
+    Word givenWord = new Word(wordDto.word);
 
     List<Word> anagramList =
         wordList.stream().filter(word -> word.isAnagram(givenWord)).collect(Collectors.toList());
 
-    // TODO : Implement AnagramAssembler
     AnagramListDto anagramListDto = new AnagramListDto();
     anagramListDto.anagrams = anagramList.stream().map(Word::toString).collect(Collectors.toList());
 

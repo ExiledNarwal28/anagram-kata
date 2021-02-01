@@ -18,7 +18,6 @@ public class ServerResourceConfig {
             new Application() {
               @Override
               public Set<Object> getSingletons() {
-                // TODO : Setup actual injection for resources
                 HashSet<Object> resources = new HashSet<>();
                 resources.add(
                     new AnagramResource(
@@ -28,7 +27,6 @@ public class ServerResourceConfig {
 
               @Override
               public Set<Class<?>> getClasses() {
-                // TODO : Setup actual injection for exception mappers
                 HashSet<Class<?>> exceptionMappers = new HashSet<>();
                 exceptionMappers.add(CatchAllExceptionMapper.class);
                 return exceptionMappers;
