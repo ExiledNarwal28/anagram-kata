@@ -19,7 +19,7 @@ public class Word {
     String myWord = word.toLowerCase();
     otherWord = otherWord.toLowerCase();
 
-    if (word.equals(otherWord)) {
+    if (myWord.equals(otherWord)) {
       return false;
     }
 
