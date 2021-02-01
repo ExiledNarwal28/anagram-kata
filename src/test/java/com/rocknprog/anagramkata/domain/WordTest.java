@@ -46,6 +46,15 @@ public class WordTest {
   }
 
   @Test
+  public void givenSameCapitalizedWord_whenCheckingIfAnagram_thenReturnFalse() {
+    Word sameCapitalizedWord = new Word(wordValue.toUpperCase());
+
+    boolean isAnagram = word.isAnagram(sameCapitalizedWord);
+
+    assertThat(isAnagram).isFalse();
+  }
+
+  @Test
   public void whenConvertingToString_thenReturnWord() {
     String stringValue = word.toString();
 

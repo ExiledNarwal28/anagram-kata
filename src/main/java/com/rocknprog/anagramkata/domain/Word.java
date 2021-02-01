@@ -12,16 +12,17 @@ public class Word {
   public boolean isAnagram(Word potentialAnagram) {
     String otherWord = potentialAnagram.toString();
 
-    if (word.equals(otherWord)) {
-      return false;
-    }
-
     if (word.length() != otherWord.length()) {
       return false;
     }
 
     String myWord = word.toLowerCase();
     otherWord = otherWord.toLowerCase();
+
+    if (word.equals(otherWord)) {
+      return false;
+    }
+
     char[] c1 = myWord.toCharArray();
     char[] c2 = otherWord.toCharArray();
     Arrays.sort(c1);
