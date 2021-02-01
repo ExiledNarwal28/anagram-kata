@@ -10,7 +10,7 @@ public class WordMother {
     return Faker.instance().lorem().word();
   }
 
-  public static List<String> createWords() {
+  public static List<String> createWordList() {
     int numberOfWords = Faker.instance().number().numberBetween(5, 20);
 
     return IntStream.range(0, numberOfWords)

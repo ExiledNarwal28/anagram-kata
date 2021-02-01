@@ -1,7 +1,6 @@
 package com.rocknprog.anagramkata.filesystem;
 
 import com.rocknprog.anagramkata.domain.WordListHelper;
-import java.util.ArrayList;
 import java.util.List;
 
 public class WordListFileHelper implements WordListHelper {
@@ -16,7 +15,6 @@ public class WordListFileHelper implements WordListHelper {
 
   @Override
   public List<String> getWordList() {
-    // TODO : Implement WordListFileHelper.getWordList
-    return new ArrayList<>();
+    return fileReader.readFile(WORD_LIST_FILE_NAME);
   }
 }
