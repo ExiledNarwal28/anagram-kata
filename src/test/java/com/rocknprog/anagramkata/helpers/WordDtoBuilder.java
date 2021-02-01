@@ -5,12 +5,17 @@ import static com.rocknprog.anagramkata.helpers.WordMother.createWord;
 import com.rocknprog.anagramkata.services.dto.WordDto;
 
 public class WordDtoBuilder {
-  private final String word = createWord();
+  private String word = createWord();
 
   private WordDtoBuilder() {}
 
   public static WordDtoBuilder aWordDto() {
     return new WordDtoBuilder();
+  }
+
+  public WordDtoBuilder withWord(String word) {
+    this.word = word;
+    return this;
   }
 
   public WordDto build() {

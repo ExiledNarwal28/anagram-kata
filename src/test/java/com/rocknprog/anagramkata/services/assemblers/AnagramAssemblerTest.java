@@ -24,7 +24,7 @@ public class AnagramAssemblerTest {
   }
 
   @Test
-  public void givenNoAnagrams_whenAssembling_thenReturnEmptyList() {
+  public void givenNoAnagram_whenAssembling_thenReturnEmptyList() {
     List<Word> anagrams = Collections.emptyList();
 
     AnagramListDto anagramListDto = anagramAssembler.assemble(anagrams);
@@ -33,7 +33,7 @@ public class AnagramAssemblerTest {
   }
 
   @Test
-  public void givenASingleAnagrams_whenAssembling_thenReturnAnagramList() {
+  public void givenASingleAnagram_whenAssembling_thenReturnAnagramList() {
     List<Word> anagrams = Collections.singletonList(anagram);
 
     AnagramListDto anagramListDto = anagramAssembler.assemble(anagrams);

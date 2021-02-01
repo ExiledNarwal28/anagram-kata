@@ -6,9 +6,6 @@ Java Maven application solving CodeKata sixth Kata : Anagrams
 
 `AnagramService` could be a lot better! We could : 
 - Saving word list into a `WordRepository` at application start and getting word list from the repository could allow us faster anagram detection
-- A `WordAssembler` could be used to assemble `Word` from `String`
-- A `WordAssembler` could be used to assemble `List<Word>` from `List<String>`
-- A `AnagramAssembler` could be used to assemble `AnagramListDto` from `List<String>`
 
 Other than that : 
 - `mvn test` does not execute tests. It's probably a bad Maven configuration. Tests can be run with an IDE though.

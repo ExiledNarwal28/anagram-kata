@@ -37,4 +37,18 @@ public class Word {
   public String toString() {
     return word;
   }
+
+  @Override
+  public boolean equals(Object object) {
+    if (object == null || getClass() != object.getClass()) return false;
+
+    Word otherWord = (Word) object;
+
+    return word.equals(otherWord.toString());
+  }
+
+  @Override
+  public int hashCode() {
+    return word.hashCode();
+  }
 }
