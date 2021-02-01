@@ -39,13 +39,13 @@ mvn test
 Code style is verified at each commit. To apply [Google Java Code Style](https://google.github.io/styleguide/javaguide.html) throughout the source code, use : 
 
 ```
-mvn git-code-format:format-code -Dgcf.globPattern=**/*
+mvn git-code-format:format-code
 ```
 
 To simply check code style, use :
 
 ```
-mvn git-code-format:validate-code-format -Dgcf.globPattern=**/*
+mvn git-code-format:validate-code-format
 ```
 
 ## License
