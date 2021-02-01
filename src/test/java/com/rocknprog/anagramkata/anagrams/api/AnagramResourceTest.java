@@ -1,12 +1,12 @@
 package com.rocknprog.anagramkata.anagrams.api;
 
 import static com.google.common.truth.Truth.assertThat;
-import static com.rocknprog.anagramkata.anagrams.helpers.AnagramsDtoBuilder.anAnagramsDto;
+import static com.rocknprog.anagramkata.anagrams.helpers.AnagramListDtoBuilder.anAnagramListDto;
 import static com.rocknprog.anagramkata.anagrams.helpers.WordDtoBuilder.aWordDto;
 import static org.mockito.Mockito.when;
 
 import com.rocknprog.anagramkata.anagrams.services.AnagramService;
-import com.rocknprog.anagramkata.anagrams.services.dto.AnagramsDto;
+import com.rocknprog.anagramkata.anagrams.services.dto.AnagramListDto;
 import com.rocknprog.anagramkata.anagrams.services.dto.WordDto;
 import javax.ws.rs.core.Response;
 import org.junit.Before;
@@ -23,21 +23,21 @@ public class AnagramResourceTest {
   private AnagramResource anagramResource;
 
   private final WordDto wordDto = aWordDto().build();
-  private final AnagramsDto anagramsDto = anAnagramsDto().build();
+  private final AnagramListDto anagramListDto = anAnagramListDto().build();
 
   @Before
   public void setup() {
     anagramResource = new AnagramResource(anagramService);
 
-    when(anagramService.findAnagrams(wordDto)).thenReturn(anagramsDto);
+    when(anagramService.findAnagrams(wordDto)).thenReturn(anagramListDto);
   }
 
   @Test
   public void whenFindAnagrams_thenRespondAnagramsDto() {
     Response response = anagramResource.findAnagrams(wordDto);
-    AnagramsDto respondedAnagramsDto = (AnagramsDto) response.getEntity();
+    AnagramListDto respondedAnagramListDto = (AnagramListDto) response.getEntity();
 
-    assertThat(respondedAnagramsDto).isSameInstanceAs(anagramsDto);
+    assertThat(respondedAnagramListDto).isSameInstanceAs(anagramListDto);
   }
 
   @Test

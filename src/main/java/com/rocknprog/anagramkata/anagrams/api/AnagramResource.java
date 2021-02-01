@@ -1,7 +1,7 @@
 package com.rocknprog.anagramkata.anagrams.api;
 
 import com.rocknprog.anagramkata.anagrams.services.AnagramService;
-import com.rocknprog.anagramkata.anagrams.services.dto.AnagramsDto;
+import com.rocknprog.anagramkata.anagrams.services.dto.AnagramListDto;
 import com.rocknprog.anagramkata.anagrams.services.dto.WordDto;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
@@ -20,10 +20,10 @@ public class AnagramResource {
   @Consumes(MediaType.APPLICATION_JSON)
   @Produces(MediaType.APPLICATION_JSON)
   public Response findAnagrams(WordDto wordDto) {
-    AnagramsDto anagramsDto = anagramService.findAnagrams(wordDto);
+    AnagramListDto anagramListDto = anagramService.findAnagrams(wordDto);
 
     return Response.status(Response.Status.OK)
-        .entity(anagramsDto)
+        .entity(anagramListDto)
         .type(MediaType.APPLICATION_JSON)
         .build();
   }
