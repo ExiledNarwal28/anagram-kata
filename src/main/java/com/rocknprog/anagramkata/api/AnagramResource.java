@@ -1,8 +1,8 @@
-package com.rocknprog.anagramkata.anagrams.api;
+package com.rocknprog.anagramkata.api;
 
-import com.rocknprog.anagramkata.anagrams.services.AnagramService;
-import com.rocknprog.anagramkata.anagrams.services.dto.AnagramListDto;
-import com.rocknprog.anagramkata.anagrams.services.dto.WordDto;
+import com.rocknprog.anagramkata.services.AnagramService;
+import com.rocknprog.anagramkata.services.dto.AnagramListDto;
+import com.rocknprog.anagramkata.services.dto.WordDto;
 import javax.ws.rs.*;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

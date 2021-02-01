@@ -1,4 +1,4 @@
-package com.rocknprog.anagramkata.errors.api;
+package com.rocknprog.anagramkata.api;
 
 import static com.google.common.truth.Truth.assertThat;
 

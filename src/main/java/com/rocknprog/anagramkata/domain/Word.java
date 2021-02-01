@@ -1,4 +1,4 @@
-package com.rocknprog.anagramkata.anagrams.domain;
+package com.rocknprog.anagramkata.domain;
 
 public class Word {
   private final String word;

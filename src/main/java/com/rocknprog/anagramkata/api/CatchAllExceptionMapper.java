@@ -1,6 +1,6 @@
-package com.rocknprog.anagramkata.errors.api;
+package com.rocknprog.anagramkata.api;
 
-import com.rocknprog.anagramkata.errors.services.dto.ErrorDto;
+import com.rocknprog.anagramkata.services.dto.ErrorDto;
 import javax.ws.rs.WebApplicationException;
 import javax.ws.rs.core.MediaType;
 import javax.ws.rs.core.Response;

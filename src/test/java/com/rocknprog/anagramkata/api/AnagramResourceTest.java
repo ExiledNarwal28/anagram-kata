@@ -1,13 +1,13 @@
-package com.rocknprog.anagramkata.anagrams.api;
+package com.rocknprog.anagramkata.api;
 
 import static com.google.common.truth.Truth.assertThat;
-import static com.rocknprog.anagramkata.anagrams.helpers.AnagramListDtoBuilder.anAnagramListDto;
-import static com.rocknprog.anagramkata.anagrams.helpers.WordDtoBuilder.aWordDto;
+import static com.rocknprog.anagramkata.helpers.AnagramListDtoBuilder.anAnagramListDto;
+import static com.rocknprog.anagramkata.helpers.WordDtoBuilder.aWordDto;
 import static org.mockito.Mockito.when;
 
-import com.rocknprog.anagramkata.anagrams.services.AnagramService;
-import com.rocknprog.anagramkata.anagrams.services.dto.AnagramListDto;
-import com.rocknprog.anagramkata.anagrams.services.dto.WordDto;
+import com.rocknprog.anagramkata.services.AnagramService;
+import com.rocknprog.anagramkata.services.dto.AnagramListDto;
+import com.rocknprog.anagramkata.services.dto.WordDto;
 import javax.ws.rs.core.Response;
 import org.junit.Before;
 import org.junit.Test;

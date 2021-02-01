@@ -1,4 +1,4 @@
-package com.rocknprog.anagramkata.errors.services.dto;
+package com.rocknprog.anagramkata.services.dto;
 
 public class ErrorDto {
   public String error;

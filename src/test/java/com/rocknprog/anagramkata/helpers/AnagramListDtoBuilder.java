@@ -1,8 +1,8 @@
-package com.rocknprog.anagramkata.anagrams.helpers;
+package com.rocknprog.anagramkata.helpers;
 
-import static com.rocknprog.anagramkata.anagrams.helpers.WordMother.createWords;
+import static com.rocknprog.anagramkata.helpers.WordMother.createWords;
 
-import com.rocknprog.anagramkata.anagrams.services.dto.AnagramListDto;
+import com.rocknprog.anagramkata.services.dto.AnagramListDto;
 import java.util.List;
 
 public class AnagramListDtoBuilder {

@@ -1,4 +1,4 @@
-package com.rocknprog.anagramkata.anagrams.services.dto;
+package com.rocknprog.anagramkata.services.dto;
 
 import java.util.List;
 

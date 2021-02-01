@@ -1,9 +1,11 @@
 package com.rocknprog.anagramkata;
 
-import com.rocknprog.anagramkata.anagrams.api.AnagramResource;
-import com.rocknprog.anagramkata.anagrams.services.AnagramService;
-import com.rocknprog.anagramkata.errors.api.CatchAllExceptionMapper;
-import com.rocknprog.anagramkata.http.api.CORSResponseFilter;
+import com.rocknprog.anagramkata.api.AnagramResource;
+import com.rocknprog.anagramkata.api.CORSResponseFilter;
+import com.rocknprog.anagramkata.api.CatchAllExceptionMapper;
+import com.rocknprog.anagramkata.filesystem.StringListFileReader;
+import com.rocknprog.anagramkata.filesystem.WordListFileHelper;
+import com.rocknprog.anagramkata.services.AnagramService;
 import java.util.HashSet;
 import java.util.Set;
 import javax.ws.rs.core.Application;
@@ -18,7 +20,9 @@ public class ServerResourceConfig {
               public Set<Object> getSingletons() {
                 // TODO : Setup actual injection for resources
                 HashSet<Object> resources = new HashSet<>();
-                resources.add(new AnagramResource(new AnagramService(wordListHelper)));
+                resources.add(
+                    new AnagramResource(
+                        new AnagramService(new WordListFileHelper(new StringListFileReader()))));
                 return resources;
               }
 

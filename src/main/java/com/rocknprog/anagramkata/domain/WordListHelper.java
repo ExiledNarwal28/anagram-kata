@@ -1,4 +1,4 @@
-package com.rocknprog.anagramkata.anagrams.domain;
+package com.rocknprog.anagramkata.domain;
 
 import java.util.List;
 

@@ -1,4 +1,4 @@
-package com.rocknprog.anagramkata.anagrams.helpers;
+package com.rocknprog.anagramkata.helpers;
 
 import com.github.javafaker.Faker;
 import java.util.List;

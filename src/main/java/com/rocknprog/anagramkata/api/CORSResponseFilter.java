@@ -1,4 +1,4 @@
-package com.rocknprog.anagramkata.http.api;
+package com.rocknprog.anagramkata.api;
 
 import javax.ws.rs.container.ContainerRequestContext;
 import javax.ws.rs.container.ContainerResponseContext;

@@ -1,9 +1,9 @@
-package com.rocknprog.anagramkata.anagrams.services;
+package com.rocknprog.anagramkata.services;
 
-import com.rocknprog.anagramkata.anagrams.domain.Word;
-import com.rocknprog.anagramkata.anagrams.domain.WordListHelper;
-import com.rocknprog.anagramkata.anagrams.services.dto.AnagramListDto;
-import com.rocknprog.anagramkata.anagrams.services.dto.WordDto;
+import com.rocknprog.anagramkata.domain.Word;
+import com.rocknprog.anagramkata.domain.WordListHelper;
+import com.rocknprog.anagramkata.services.dto.AnagramListDto;
+import com.rocknprog.anagramkata.services.dto.WordDto;
 import java.util.List;
 import java.util.stream.Collectors;
 
@@ -17,7 +17,7 @@ public class AnagramService {
 
   // TODO : Test AnagramService.findAnagrams
   public AnagramListDto findAnagrams(WordDto wordDto) {
-    List<String> stringList = wordListHelper.getWordList();
+    List<String> stringList = wordListHelper.getWordList(); // TODO : Implement WordRepository
 
     List<Word> wordList =
         stringList.stream()

@@ -1,4 +1,4 @@
-package com.rocknprog.anagramkata.files.filesystem;
+package com.rocknprog.anagramkata.filesystem;
 
 import java.util.ArrayList;
 import java.util.List;

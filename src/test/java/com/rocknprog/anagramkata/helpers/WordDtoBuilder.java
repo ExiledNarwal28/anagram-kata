@@ -1,8 +1,8 @@
-package com.rocknprog.anagramkata.anagrams.helpers;
+package com.rocknprog.anagramkata.helpers;
 
-import static com.rocknprog.anagramkata.anagrams.helpers.WordMother.createWord;
+import static com.rocknprog.anagramkata.helpers.WordMother.createWord;
 
-import com.rocknprog.anagramkata.anagrams.services.dto.WordDto;
+import com.rocknprog.anagramkata.services.dto.WordDto;
 
 public class WordDtoBuilder {
   private final String word = createWord();

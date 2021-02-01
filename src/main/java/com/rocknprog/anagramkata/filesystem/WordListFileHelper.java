@@ -1,7 +1,6 @@
-package com.rocknprog.anagramkata.anagrams.filesystem;
+package com.rocknprog.anagramkata.filesystem;
 
-import com.rocknprog.anagramkata.anagrams.domain.WordListHelper;
-import com.rocknprog.anagramkata.files.filesystem.StringListFileReader;
+import com.rocknprog.anagramkata.domain.WordListHelper;
 import java.util.ArrayList;
 import java.util.List;
 
