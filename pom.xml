@@ -28,6 +28,7 @@
 		<maven-surefire.version>2.22.2</maven-surefire.version>
 		<mockito-junit-jupiter.version>3.3.3</mockito-junit-jupiter.version>
 		<javafaker.version>1.0.2</javafaker.version>
+		<google.truth.version>1.1</google.truth.version>
 		<!-- Code style -->
 		<maven-git-code-format.version>1.39</maven-git-code-format.version>
 	</properties>
@@ -101,6 +102,12 @@
 			<groupId>com.github.javafaker</groupId>
 			<artifactId>javafaker</artifactId>
 			<version>${javafaker.version}</version>
+			<scope>test</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.google.truth</groupId>
+			<artifactId>truth</artifactId>
+			<version>${google.truth.version}</version>
 			<scope>test</scope>
 		</dependency>
 	</dependencies>
