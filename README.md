@@ -1,4 +1,4 @@
-# anagram-kata
+# Anagram Kata
 
 Java Maven application solving CodeKata sixth Kata : Anagrams
 
