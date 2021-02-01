@@ -2,6 +2,7 @@ package com.rocknprog.anagramkata.services;
 
 import com.rocknprog.anagramkata.domain.Word;
 import com.rocknprog.anagramkata.domain.WordListHelper;
+import com.rocknprog.anagramkata.services.assemblers.AnagramAssembler;
 import com.rocknprog.anagramkata.services.dto.AnagramListDto;
 import com.rocknprog.anagramkata.services.dto.WordDto;
 import java.util.List;
@@ -10,11 +11,14 @@ import java.util.stream.Collectors;
 public class AnagramService {
 
   private final WordListHelper wordListHelper;
+  private final AnagramAssembler anagramAssembler;
 
   public AnagramService(WordListHelper wordListHelper) {
     this.wordListHelper = wordListHelper;
+    anagramAssembler = new AnagramAssembler();
   }
 
+  // TODO : Test AnagramService.findAnagrams
   public AnagramListDto findAnagrams(WordDto wordDto) {
     List<String> stringList = wordListHelper.getWordList();
 
@@ -24,9 +28,6 @@ public class AnagramService {
     List<Word> anagramList =
         wordList.stream().filter(word -> word.isAnagram(givenWord)).collect(Collectors.toList());
 
-    AnagramListDto anagramListDto = new AnagramListDto();
-    anagramListDto.anagrams = anagramList.stream().map(Word::toString).collect(Collectors.toList());
-
-    return anagramListDto;
+    return anagramAssembler.assemble(anagramList);
   }
 }
