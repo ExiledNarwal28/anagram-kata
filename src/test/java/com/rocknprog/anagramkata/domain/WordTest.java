@@ -37,6 +37,15 @@ public class WordTest {
   }
 
   @Test
+  public void givenSameWord_whenCheckingIfAnagram_thenReturnFalse() {
+    Word sameWord = new Word(wordValue);
+
+    boolean isAnagram = word.isAnagram(sameWord);
+
+    assertThat(isAnagram).isFalse();
+  }
+
+  @Test
   public void whenConvertingToString_thenReturnWord() {
     String stringValue = word.toString();
 

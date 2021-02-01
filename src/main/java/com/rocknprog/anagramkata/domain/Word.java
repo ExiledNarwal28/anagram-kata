@@ -12,6 +12,10 @@ public class Word {
   public boolean isAnagram(Word potentialAnagram) {
     String otherWord = potentialAnagram.toString();
 
+    if (word.equals(otherWord)) {
+      return false;
+    }
+
     if (word.length() != otherWord.length()) {
       return false;
     }
