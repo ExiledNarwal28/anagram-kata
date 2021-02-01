@@ -6,7 +6,7 @@ import java.util.List;
 
 public class WordListFileHelper implements WordListHelper {
 
-  private static final String EMAIL_PROPERTIES_FILE_PATH = "data/wordlist.txt";
+  private static final String WORD_LIST_FILE_NAME = "wordlist.txt";
 
   private final StringListFileReader fileReader;
 
