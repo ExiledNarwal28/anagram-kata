@@ -4,7 +4,7 @@ Java Maven application solving [CodeKata's sixth Kata : Anagrams](http://codekat
 
 ## Potential upgrades
 
-- Saving word list into a `WordRepository` at application start and getting word list from the repository could allow us faster anagram detection
+- Saving word list into a in-memory `WordRepository` at application start and getting word list from the repository could allow us faster anagram detection
 - Dependency injection could be handled by hk2 or something else.
 
 ## Installation
