@@ -23,14 +23,16 @@ public class Word {
       return false;
     }
 
-    char[] c1 = myWord.toCharArray();
-    char[] c2 = otherWord.toCharArray();
-    Arrays.sort(c1);
-    Arrays.sort(c2);
-    String sc1 = new String(c1);
-    String sc2 = new String(c2);
+    myWord = sortString(myWord);
+    otherWord = sortString(otherWord);
 
-    return sc1.equals(sc2);
+    return myWord.equals(otherWord);
+  }
+
+  private String sortString(String string) {
+    char[] charArray = string.toCharArray();
+    Arrays.sort(charArray);
+    return new String(charArray);
   }
 
   @Override
