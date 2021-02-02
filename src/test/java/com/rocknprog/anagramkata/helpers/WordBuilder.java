@@ -5,12 +5,17 @@ import static com.rocknprog.anagramkata.helpers.WordMother.createWord;
 import com.rocknprog.anagramkata.domain.Word;
 
 public class WordBuilder {
-  private final String word = createWord();
+  private String word = createWord();
 
   private WordBuilder() {}
 
   public static WordBuilder aWord() {
     return new WordBuilder();
+  }
+
+  public WordBuilder withWord(String word) {
+    this.word = word;
+    return this;
   }
 
   public Word build() {

@@ -21,7 +21,15 @@ public class AnagramService {
     anagramAssembler = new AnagramAssembler();
   }
 
-  // TODO : Test AnagramService.findAnagrams
+  public AnagramService(
+      WordListHelper wordListHelper,
+      WordAssembler wordAssembler,
+      AnagramAssembler anagramAssembler) {
+    this.wordListHelper = wordListHelper;
+    this.wordAssembler = wordAssembler;
+    this.anagramAssembler = anagramAssembler;
+  }
+
   public AnagramListDto findAnagrams(WordDto wordDto) {
     List<String> stringList = wordListHelper.getWordList();
 
