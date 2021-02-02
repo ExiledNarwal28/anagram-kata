@@ -4,10 +4,7 @@ Java Maven application solving CodeKata sixth Kata : Anagrams
 
 ## Potential upgrades
 
-`AnagramService` could be a lot better! We could : 
 - Saving word list into a `WordRepository` at application start and getting word list from the repository could allow us faster anagram detection
-
-Other than that : 
 - `mvn test` does not execute tests. It's probably a bad Maven configuration. Tests can be run with an IDE though.
 - Dependency injection could be handled by hk2 or something else.
 
@@ -15,7 +12,7 @@ Other than that :
 
 Maven is used as a build automation tool, as well as a dependency manager. To build the application, use : 
 
-```
+```shell
 mvn clean install
 ```
 
@@ -25,11 +22,31 @@ mvn clean install
 
 To execute the application, use : 
 
-```
+```shell
 mvn exec:java
 ```
 
 The app will be running on [http://localhost:8080](http://localhost:8080).
+
+To test, send the following to `POST /anagrams` : 
+```json
+{
+  "word": "yourWord"
+}
+```
+
+You will received anagrams in the following format : 
+```json
+{
+  "anagrams": [
+    "firstAnagram",
+    "secondAnagram",
+    ...
+  ]
+}
+```
+
+A Postman collection with the needed request can be found at [`resources/postman_collection.json`](resources/postman_collection.json)
 
 ## Contributing
 
@@ -39,7 +56,7 @@ Tests are located in `src/test/java/com/rocknprog/anagramkata`. They are all che
 
 To run unit tests, use :
 
-```
+```shell
 mvn test
 ```
 
@@ -47,13 +64,13 @@ mvn test
 
 Code style is verified at each commit. To apply [Google Java Code Style](https://google.github.io/styleguide/javaguide.html) throughout the source code, use : 
 
-```
+```shell
 mvn git-code-format:format-code
 ```
 
 To simply check code style, use :
 
-```
+```shell
 mvn git-code-format:validate-code-format
 ```
 
