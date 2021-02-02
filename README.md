@@ -1,6 +1,6 @@
 # Anagram Kata
 
-Java Maven application solving CodeKata sixth Kata : Anagrams
+Java Maven application solving [CodeKata sixth Kata : Anagrams](http://codekata.com/kata/kata06-anagrams/)
 
 ## Potential upgrades
 
