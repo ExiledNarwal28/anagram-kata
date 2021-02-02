@@ -5,7 +5,6 @@ Java Maven application solving [CodeKata's sixth Kata : Anagrams](http://codekat
 ## Potential upgrades
 
 - Saving word list into a `WordRepository` at application start and getting word list from the repository could allow us faster anagram detection
-- `mvn test` does not execute tests. It's probably a bad Maven configuration. Tests can be run with an IDE though.
 - Dependency injection could be handled by hk2 or something else.
 
 ## Installation
