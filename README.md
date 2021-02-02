@@ -1,5 +1,7 @@
 # Anagram Kata
 
+![CI](https://github.com/ExiledNarwal28/anagram-kata/workflows/CI/badge.svg)
+
 Java Maven application solving [CodeKata's sixth Kata : Anagrams](http://codekata.com/kata/kata06-anagrams/)
 
 ## Potential upgrades
